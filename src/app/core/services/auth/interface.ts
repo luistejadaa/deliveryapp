@@ -1,5 +1,5 @@
 import { AuthResponse, RefreshTokenRequest } from "../../models";
-import { APIResponse } from "../../network/network-manager";
+import { APIResponse } from "../../network/api-manager";
 
 interface IAuthService {
     login: (email: string, password: string) => Promise<APIResponse<AuthResponse>>;

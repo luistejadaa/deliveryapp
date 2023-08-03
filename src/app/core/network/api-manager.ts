@@ -1,5 +1,5 @@
 import Axios, {AxiosInstance, AxiosRequestConfig, HttpStatusCode} from 'axios';
-import {secureStorageService} from '../services';
+import {secureStorageService, crashlyticsService } from '../services';
 import {AuthConstants, StorageKeys} from '../constants';
 import {IEndpoint} from '../endpoints';
 import {cryptoService} from '../services/crypto/crypto-service';
@@ -26,7 +26,7 @@ export interface APIResponse<T> {
 /**
  * Represents a network manager.
  */
-interface INetworkManager {
+interface IAPIManager {
   get: <T>(request: APIRequest) => Promise<APIResponse<T>>;
   post: <T>(request: APIRequest) => Promise<APIResponse<T>>;
   put: <T>(request: APIRequest) => Promise<APIResponse<T>>;
@@ -36,7 +36,7 @@ interface INetworkManager {
 /**
  * Represents a network manager that uses Axios.
  */
-export class NetworkManager implements INetworkManager {
+export class APIManager implements IAPIManager {
   private axiosConfig: AxiosRequestConfig<any>;
   private readonly axiosInstance: AxiosInstance;
 
@@ -70,6 +70,7 @@ export class NetworkManager implements INetworkManager {
         return request;
       },
       error => {
+        crashlyticsService.log(error);
         return Promise.reject(error);
       },
     );
@@ -95,6 +96,7 @@ export class NetworkManager implements INetworkManager {
         return request;
       },
       error => {
+        crashlyticsService.log(error);
         return Promise.reject(error);
       },
     );
@@ -180,5 +182,5 @@ export class NetworkManager implements INetworkManager {
   };
 }
 
-const networkManager: INetworkManager = new NetworkManager();
+const networkManager: IAPIManager = new APIManager();
 export {networkManager};
