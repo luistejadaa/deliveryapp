@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {CustomerOrderStatus} from '../models';
+import {CustomerOrderStatus, DeliveryOrderStatus} from '../models';
 
 /**
  * Defines the initial state and reducers for the order slice of the Redux store.
@@ -7,7 +7,7 @@ import {CustomerOrderStatus} from '../models';
 const orderSelice = createSlice({
     name: 'orderSelice',
     initialState: {
-        orderStatus: null as CustomerOrderStatus | null,
+        orderStatus: null as CustomerOrderStatus| DeliveryOrderStatus | null,
     },
     reducers: {
         /**
