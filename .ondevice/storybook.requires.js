@@ -38,7 +38,10 @@ try {
 } catch {}
 
 const getStories = () => {
-  return [require("../components/Button/Button.stories.tsx")];
+  return [
+    require("../src/app/components/atoms/example-button/example-button.stories"),
+    require("../src/app/components/atoms/example-label/example-label.stories")
+  ];
 };
 
 configure(getStories, module, false);
