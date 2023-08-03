@@ -10,10 +10,6 @@ const Endpoints = {
       path: '/signup',
       method: 'POST',
     } as IEndpoint,
-    getProfile: {
-      path: '/profile',
-      method: 'GET',
-    },
     refreshToken: {
       path: '/refresh-token',
       method: 'POST',
@@ -22,6 +18,10 @@ const Endpoints = {
       path: '/logout',
       method: 'POST',
     } as IEndpoint,
+    profile: {
+        path: '/logout',
+        method: 'POST',
+      } as IEndpoint,
   },
   crypto: {
     handshake: {
