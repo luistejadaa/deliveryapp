@@ -32,6 +32,8 @@ interface IOrderService {
      * @returns A promise that resolves with an APIResponse containing the result of the cancel request.
      */
     requestCancelOrder: (orderId: string) => Promise<APIResponse<CancelOrderReponse>>;
+
+    rateOrder: (orderId: string, rating: number) => Promise<APIResponse<OrderResponse>>;
 }
 
 export type { IOrderService };

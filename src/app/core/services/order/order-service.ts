@@ -19,6 +19,10 @@ class OrderService implements IOrderService {
     requestCancelOrder = (orderId: string): Promise<APIResponse<CancelOrderReponse>> => {
         throw new Error("Method not implemented.");
     }
+
+    rateOrder = (orderId: string, rating: number): Promise<APIResponse<OrderResponse>> => {
+        throw new Error("Method not implemented.");
+    }
 }
 
 const orderService: IOrderService = new OrderService();

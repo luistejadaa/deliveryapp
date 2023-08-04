@@ -26,4 +26,4 @@ const deliveryOrderListener = {
     }
 }
 
-export { deliveryOrderListener as customerOrderListener };
+export { deliveryOrderListener };
