@@ -1,0 +1,1 @@
+Fastlane va a servir para automatizar el proces de builds, despliegues y firmados de las apps.

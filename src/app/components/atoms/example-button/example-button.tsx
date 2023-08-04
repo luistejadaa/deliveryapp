@@ -11,6 +11,7 @@ const ExampleButton = ({text, onPress, color: backgroundColor, textColor, disabl
     <TouchableOpacity
       style={[exampleButtonStyles.button, !!backgroundColor && {backgroundColor}]}
       onPress={onPress}
+      disabled={disabled}
       activeOpacity={MEASURES.opacity.activeOpacity}>
       <Text style={[exampleButtonStyles.buttonText, !!textColor && {color: textColor}]}>
         {text}

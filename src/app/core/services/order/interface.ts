@@ -33,6 +33,12 @@ interface IOrderService {
      */
     requestCancelOrder: (orderId: string) => Promise<APIResponse<CancelOrderReponse>>;
 
+    /**
+     * Sends a request to rate the order with the specified ID.
+     * @param orderId The ID of the order to rate.
+     * @param rating The rating to assign to the order.
+     * @returns A promise that resolves with an APIResponse containing the result of the rating request.
+     */
     rateOrder: (orderId: string, rating: number) => Promise<APIResponse<OrderResponse>>;
 }
 

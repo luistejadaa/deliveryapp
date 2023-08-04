@@ -12,7 +12,15 @@
     "prestart": "yarn update-stories",
     "storybook-watcher": "sb-rn-watcher --config-path .ondevice",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "android:dev": "ENVFILE=.env.dev react-native run-android --variant devDebug",
+    "android:qa": "ENVFILE=.env.qa react-native run-android --variant qaDebug",
+    "android:stage": "ENVFILE=.env.stage react-native run-android --variant stageDebug",
+    "android:prod": "ENVFILE=.env.prod react-native run-android --variant prodDebug",
+    "ios:dev": "ENVFILE=.env.dev react-native run-ios --scheme deliveryapp-dev",
+    "ios:qa": "ENVFILE=.env.qa react-native run-ios --scheme deliveryapp-qa",
+    "ios:stage": "ENVFILE=.env.stage react-native run-ios --scheme deliveryapp-stage",
+    "ios:prod": "ENVFILE=.env.prod react-native run-ios --scheme deliveryapp-prod"
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "^1.17.3",
