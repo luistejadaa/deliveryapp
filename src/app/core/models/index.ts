@@ -26,6 +26,9 @@ export * from './response/set-default-credit-card-response';
 export * from './response/promotion-response';
 export * from './response/apply-promotion-response';
 export * from './response/deliver-order-response';
+export * from './response/user-profile-response';
+export * from './response/like-product-response';
+export * from './response/dislike-product-response';
 
 export * from './types/account-type';
 export * from './types/listener-type';

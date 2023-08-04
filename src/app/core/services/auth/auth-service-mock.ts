@@ -1,7 +1,6 @@
 import { HttpStatusCode } from "axios";
-import { Endpoints } from "../../endpoints";
 import { AuthResponse, RefreshTokenRequest, UserProfile } from "../../models";
-import { APIResponse, networkManager } from "../../network";
+import { APIResponse } from "../../network";
 import { IAuthService } from "./interface";
 import { generateRandomString } from "../../utils";
 
