@@ -1,7 +1,7 @@
 /**
  * This interface defines the methods that a delivery service should implement.
  */
-import { AcceptOrderResponse, OrderDetailResponse, OrderResponse, RejectOrderResponse } from "../../models";
+import { AcceptOrderResponse, DeliverOrderResponse, OrderDetailResponse, OrderResponse, RejectOrderResponse } from "../../models";
 import { APIResponse } from "../../network";
 
 interface IDeliveryService {
@@ -31,6 +31,13 @@ interface IDeliveryService {
      * @returns A promise that resolves to an APIResponse containing a RejectOrderResponse object.
      */
     rejectOrder(orderId: string): Promise<APIResponse<RejectOrderResponse>>;
+
+    /**
+     * Delivers an order.
+     * @param orderId The ID of the order to deliver.
+     * @returns A promise that resolves to an APIResponse containing a DeliverOrderResponse object.
+     */
+    deliverOrder(orderId: string): Promise<APIResponse<DeliverOrderResponse>>;
 }
 
 export type { IDeliveryService };

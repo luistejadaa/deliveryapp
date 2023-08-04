@@ -5,6 +5,7 @@ interface IExampleButtonProps {
     text: string;
     color?: string;
     textColor?: string;
+    disabled: boolean;
   };
   
   interface IExampleButtonStyles {
