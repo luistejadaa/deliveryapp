@@ -21,3 +21,11 @@ This project is deliveryapp challenge mobile application that is developed in re
 ## Run storybook
 ```
 yarn storybook
+```
+
+## Dynamic view
+![alt dynamic view](https://github.com/luistejadaa/deliveryapp/blob/master/docs/assets/dynamic.jpg)
+
+
+## Static view
+![alt static view](https://github.com/luistejadaa/deliveryapp/blob/master/docs/assets/static.jpg)
